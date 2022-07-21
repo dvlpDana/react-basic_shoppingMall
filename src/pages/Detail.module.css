@@ -1,0 +1,147 @@
+
+.productList {
+  display: flex;
+  list-style: none;
+  padding: 0.25rem;
+  margin: 0;
+  background-color: #e7e7e7;
+  font-size: smaller;
+}
+
+.productList li {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.productList li:first-child {
+  padding-left: 1rem;
+}
+
+.productList li:not(:last-child)::before {
+  content: ">";
+  position: absolute;
+  right: 1rem;
+}
+
+.detailProduct {
+  display: flex;
+}
+
+.detailProductImg {
+  width: 50%;
+}
+
+.detailProductTxt {
+  width: 50%;
+}
+
+.detailProductImg img {
+  width: 100%;
+}
+
+.detailProductTxt {
+  padding: 0 2rem;
+}
+
+.detailProductTxt h4 {
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap:break-word; 
+  line-height: 1.75rem;
+  height: 1.75rem;
+  margin : 2rem 0
+}
+
+.detailProductTxt > p {
+  display: flex;
+}
+
+.detailProductTxt p:first-of-type span {display:block; width: 30%;}
+.detailProductTxt p:first-of-type strong {display:block; width: 70%; text-align: center;}
+
+.detailProduct p:nth-of-type(2) > span {width: 30%;}
+.detailProduct p:nth-of-type(2) > p {width: 100%; text-align: center; display: flex; justify-content: center;}
+
+.detailProduct p:nth-of-type(2) > p > span {width: 10%; display: inline-block; font-weight: bold;}
+.detailProduct p:nth-of-type(2) button {
+  display: inline-block;
+  border-style: none;
+  background-color: lightslategray;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.detailProduct p:nth-of-type(2) button::before {
+  content: "+";
+  position: absolute;
+  top : 50%;
+  left: 50%;
+  transform: translate(-45%, -55%);
+  font-size: large;
+  color: white;
+}
+
+.productPrice {
+  font-size: smaller;
+}
+
+.totalPrice {
+  background-color: #eaeaea;
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+.totalPrice span {
+  flex: 1;
+  text-align: center;
+} 
+
+.detailBtn {
+  width: 50%;
+  border-style: none;
+  border: 1px solid #d1d1d1;
+  padding: 1rem 0;
+  background-color: transparent;
+  margin-top: 5rem;
+  transition: .3s;
+}
+
+.detailBtn:hover {
+  background-color: lightslategray;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.GoTop {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: lightgray;
+  color: transparent;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 2rem;
+}
+
+.GoTop span {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  top: 50%;
+}
+
+.GoTop span:nth-of-type(1) {left: 0.3rem; transform: rotate(-45deg) translateY(-100%);}
+.GoTop span:nth-of-type(2) {right: 0.3rem; transform: rotate(45deg) translateY(-100%);}
+
